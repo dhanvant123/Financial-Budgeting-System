@@ -8,16 +8,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/recommendations")
-public class RecommendationController {
+public class RecommController {
 
     private final RecommService ser;
 
-    public RecommendationController(RecommService ser) {
+    public RecommController(RecommService ser) {
         this.ser = ser;
     }
 
     @GetMapping("/user/{userId}")
-    public List<RecommendationController> getUserRecomm(@PathVariable Long userId) {
+    public List<Recomm> getUserRecomm(@PathVariable Long userId) {
         return ser.getRecommForUser(userId);
     }
 

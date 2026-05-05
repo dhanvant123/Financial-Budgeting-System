@@ -15,13 +15,13 @@ public class WalletService {
 
     public Wallet deposit(Long userId, double amount) {
         Wallet wallet = repo.findByUserId(userId);
-        wallet.setBalance(wallet.getBalance() + amount);
+        wallet.setBal(wallet.getBal() + amount);
         return repo.save(wallet);
     }
 
     public Wallet withdraw(Long userId, double amount) {
         Wallet wallet = repo.findByUserId(userId);
-        wallet.setBalance(wallet.getBalance() - amount);
+        wallet.setBal(wallet.getBal() - amount);
         return repo.save(wallet);
     }
 

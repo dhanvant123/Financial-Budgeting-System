@@ -15,7 +15,7 @@ public class GrpService {
         this.repo = repo;
     }
 
-    public Grp createGroup(Grp grp) {
+    public Grp createGrp(Grp grp) {
         return repo.save(grp);
     }
 
