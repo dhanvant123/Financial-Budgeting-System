@@ -22,4 +22,8 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "gid")
     private Grp grp;
+
+    @ManyToOne
+    @JoinColumn(name = "wid")
+    private Wallet wal;
 }
