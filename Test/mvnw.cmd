@@ -188,37 +188,4 @@ try {
 
 Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
 
-@REM import org.springframework.context.annotation.Bean;
-@REM import org.springframework.context.annotation.Configuration;
-@REM import org.springframework.web.cors.CorsConfiguration;
-@REM import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-@REM import org.springframework.web.cors.CorsConfigurationSource;
-@REM
-@REM import java.util.List;
-@REM
-@REM @Configuration
-@REM public class CorsConfig {
-@REM
-@REM     @Bean
-@REM     public CorsConfigurationSource corsConfigurationSource() {
-@REM
-@REM         CorsConfiguration config = new CorsConfiguration();
-@REM
-@REM         config.setAllowedOriginPatterns(List.of(
-@REM                 "http://localhost:5173",
-@REM                 "https://ocms-six.vercel.app"
-@REM         ));
-@REM
-@REM         config.setAllowedMethods(List.of(
-@REM                 "GET", "POST", "PUT", "DELETE", "OPTIONS"
-@REM         ));
-@REM
-@REM         config.setAllowedHeaders(List.of("*"));
-@REM         config.setAllowCredentials(true);
-@REM
-@REM         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-@REM         source.registerCorsConfiguration("/**", config);
-@REM
-@REM         return source;
-@REM     }
-@REM }
+

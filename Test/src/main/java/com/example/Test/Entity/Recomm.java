@@ -4,9 +4,8 @@ import com.example.Test.Enum.Category;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -14,14 +13,14 @@ import lombok.Data;
 @Entity
 @Table(name = "recommendation")
 public class Recomm {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long rId;
-
     @Column(length = 100)
     private String recDesc;
 
     private int recPercent;
+
+    @ManyToOne
+    @JoinColumn(name = "uid")
+    private User user;
 
     private Category category;
 }

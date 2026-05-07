@@ -1,5 +1,9 @@
 package com.example.Test.Entity;
 
+import java.time.LocalDateTime;
+
+import com.example.Test.Enum.Status;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,9 +23,21 @@ public class Transaction {
 
     private String upi;
 
+    private Long amt;
+
+    private String transacType;
+
+    private LocalDateTime timeStamp;
+
+    private Status status;
+
     @ManyToOne
     @JoinColumn(name = "gid")
     private Grp grp;
+
+    @ManyToOne
+    @JoinColumn(name = "uid")
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "wid")
