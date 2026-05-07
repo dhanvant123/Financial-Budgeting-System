@@ -13,6 +13,11 @@ public class WalletService {
         this.repo = repo;
     }
 
+    public String createWallet(Wallet wal) {
+        repo.save(wal);
+        return "Saved Successfully";
+    }
+
     public Wallet deposit(Long userId, double amount) {
         Wallet wallet = repo.findByUserId(userId);
         wallet.setBal(wallet.getBal() + amount);

@@ -14,6 +14,11 @@ public class WalletController {
         this.ser = ser;
     }
 
+    @PostMapping("/create")
+    public String createWallet(@RequestBody Wallet wal) {
+        return createWallet(wal);
+    }
+
     @PostMapping("/deposit/{userId}")
     public Wallet deposit(@PathVariable Long userId,
             @RequestParam double amount) {
